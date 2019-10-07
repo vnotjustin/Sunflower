@@ -5,6 +5,7 @@ using UnityEngine;
 public class CollectDetector : MonoBehaviour
 {
     public static bool clovis = false;
+    public static bool nyu = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +23,11 @@ public class CollectDetector : MonoBehaviour
         if (other.tag == "clovis")
         {
             clovis = true;
-            Debug.Log("clovis true");
+        }
+
+        if (other.tag == "nyu")
+        {
+            nyu = true;
         }
 
         other.gameObject.SetActive(false);

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ItemEnabler : MonoBehaviour
 {
     public Image clovis;
+    public Image nyu;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,11 @@ public class ItemEnabler : MonoBehaviour
         if (CollectDetector.clovis == true)
         {
             clovis.enabled = true;
+        }
+
+        if (CollectDetector.nyu == true)
+        {
+            nyu.enabled = true;
         }
     }
 }
